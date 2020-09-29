@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/AhoCorasickTrie_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/AhoCorasickTrie/AhoCorasickTrie_{{ version }}.tar.gz
-  sha256: 2803c4925a96b6bee59c3c843ca792c61d5e811b4994175ed2712bedba67544c
+  sha256: f8968a278178bc919f366d1f1c47eea1e124f9fe01644c8d5c1d54d464f1037e
 
 build:
   merge_build_host: true  # [win]
-  number: 1004
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
